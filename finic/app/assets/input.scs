@@ -1,0 +1,479 @@
+// Generated for: spectre
+// Generated on: Feb  3 16:31:25 2012
+// Design library name: qVLD1A_TopSim_LL
+// Design cell name: test_for_rails_app
+// Design view name: schematic
+simulator lang=spectre
+global 0
+include "/netapp_01/eda/cds/IC5141_USR6_lnx86/tools/dfII/samples/artist/ahdlLib/quantity.spectre"
+include "models.scs"
+
+// Library name: CORE9HV2V5
+// Cell name: ND2HV
+// View name: cmos_sch
+subckt ND2HV A B Z inh_gnd inh_vdd
+    MP0 (Z A inh_vdd inh_vdd) EP2V5GP_BS3JU w=0.40u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+    MP1 (Z B inh_vdd inh_vdd) EP2V5GP_BS3JU w=0.40u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+    MN1 (Z B net15 inh_gnd) EN2V5GP_BS3JU w=0.5u l=0.35u nfing=1 ncrsd=1 \
+        mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 dvt_mdev=0 \
+        dmu_mdev=0
+    MN0 (net15 A inh_gnd inh_gnd) EN2V5GP_BS3JU w=0.5u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+ends ND2HV
+// End of subcircuit definition.
+
+// Library name: CORE9HV2V5
+// Cell name: ND3HV
+// View name: cmos_sch
+subckt ND3HV A B C Z inh_gnd inh_vdd
+    MP1 (Z C inh_vdd inh_vdd) EP2V5GP_BS3JU w=0.4u l=0.35u nfing=1 ncrsd=1 \
+        mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 dvt_mdev=0 \
+        dmu_mdev=0
+    MP0 (Z A inh_vdd inh_vdd) EP2V5GP_BS3JU w=0.4u l=0.35u nfing=1 ncrsd=1 \
+        mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 dvt_mdev=0 \
+        dmu_mdev=0
+    MP2 (Z B inh_vdd inh_vdd) EP2V5GP_BS3JU w=0.4u l=0.35u nfing=1 ncrsd=1 \
+        mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 dvt_mdev=0 \
+        dmu_mdev=0
+    MN2 (net35 A inh_gnd inh_gnd) EN2V5GP_BS3JU w=0.68u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+    MN1 (Z C net41 inh_gnd) EN2V5GP_BS3JU w=0.68u l=0.35u nfing=1 ncrsd=1 \
+        mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 dvt_mdev=0 \
+        dmu_mdev=0
+    MN0 (net41 B net35 inh_gnd) EN2V5GP_BS3JU w=0.68u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+ends ND3HV
+// End of subcircuit definition.
+
+// Library name: CORE9HV2V5
+// Cell name: ND4HV
+// View name: cmos_sch
+subckt ND4HV A B C D Z inh_gnd inh_vdd
+    MP2 (Z B inh_vdd inh_vdd) EP2V5GP_BS3JU w=0.40u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+    MP3 (Z D inh_vdd inh_vdd) EP2V5GP_BS3JU w=0.40u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+    MP1 (Z C inh_vdd inh_vdd) EP2V5GP_BS3JU w=0.40u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+    MP0 (Z A inh_vdd inh_vdd) EP2V5GP_BS3JU w=0.40u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+    MN5 (net020 C net030 inh_gnd) EN2V5GP_BS3JU w=0.84u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+    MN4 (net030 B net036 inh_gnd) EN2V5GP_BS3JU w=0.84u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+    MN3 (Z D net020 inh_gnd) EN2V5GP_BS3JU w=0.84u l=0.35u nfing=1 ncrsd=1 \
+        mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 dvt_mdev=0 \
+        dmu_mdev=0
+    MN2 (net036 A inh_gnd inh_gnd) EN2V5GP_BS3JU w=0.84u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+ends ND4HV
+// End of subcircuit definition.
+
+// Library name: CORE9HV2V5
+// Cell name: IVHVX4
+// View name: cmos_sch
+subckt IVHVX4 A Z inh_gnd inh_vdd
+    MP0 (Z A inh_vdd inh_vdd) EP2V5GP_BS3JU w=.80u l=0.35u nfing=1 ncrsd=1 \
+        mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 dvt_mdev=0 \
+        dmu_mdev=0
+    MP1 (Z A inh_vdd inh_vdd) EP2V5GP_BS3JU w=0.80u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+    MN1 (Z A inh_gnd inh_gnd) EN2V5GP_BS3JU w=0.70u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+    MN0 (Z A inh_gnd inh_gnd) EN2V5GP_BS3JU w=0.70u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+ends IVHVX4
+// End of subcircuit definition.
+
+// Library name: CORE9HV2V5
+// Cell name: NR2HV
+// View name: cmos_sch
+subckt NR2HV A B Z inh_gnd inh_vdd
+    MP0 (net028 A inh_vdd inh_vdd) EP2V5GP_BS3JU w=0.74u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+    MP1 (Z B net028 inh_vdd) EP2V5GP_BS3JU w=0.74u l=0.35u nfing=1 ncrsd=1 \
+        mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 dvt_mdev=0 \
+        dmu_mdev=0
+    MN1 (Z B inh_gnd inh_gnd) EN2V5GP_BS3JU w=0.35u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+    MN0 (Z A inh_gnd inh_gnd) EN2V5GP_BS3JU w=0.35u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+ends NR2HV
+// End of subcircuit definition.
+
+// Library name: CORE9HV2V5
+// Cell name: IVHV
+// View name: cmos_sch
+subckt IVHV A Z inh_gnd inh_vdd
+    MP0 (Z A inh_vdd inh_vdd) EP2V5GP_BS3JU w=0.40u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+    MN0 (Z A inh_gnd inh_gnd) EN2V5GP_BS3JU w=0.35u l=0.35u nfing=1 \
+        ncrsd=1 mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+ends IVHV
+// End of subcircuit definition.
+
+// Library name: qVLD1A_CR
+// Cell name: decode_5to32_cr_q01
+// View name: schematic
+subckt decode_5to32_cr_q01 EN GND IN\<4\> IN\<3\> IN\<2\> IN\<1\> IN\<0\> \
+        OUT\<31\> OUT\<30\> OUT\<29\> OUT\<28\> OUT\<27\> OUT\<26\> \
+        OUT\<25\> OUT\<24\> OUT\<23\> OUT\<22\> OUT\<21\> OUT\<20\> \
+        OUT\<19\> OUT\<18\> OUT\<17\> OUT\<16\> OUT\<15\> OUT\<14\> \
+        OUT\<13\> OUT\<12\> OUT\<11\> OUT\<10\> OUT\<9\> OUT\<8\> OUT\<7\> \
+        OUT\<6\> OUT\<5\> OUT\<4\> OUT\<3\> OUT\<2\> OUT\<1\> OUT\<0\> \
+        V2P5
+    I41 (DEN NBIT\<2\> BIT\<1\> BIT\<0\> NXX011 GND V2P5) ND4HV
+    I42 (DEN NBIT\<2\> BIT\<1\> NBIT\<0\> NXX010 GND V2P5) ND4HV
+    I43 (DEN NBIT\<2\> NBIT\<1\> BIT\<0\> NXX001 GND V2P5) ND4HV
+    I44 (DEN NBIT\<2\> NBIT\<1\> NBIT\<0\> NXX000 GND V2P5) ND4HV
+    I10 (DEN BIT\<2\> BIT\<1\> BIT\<0\> NXX111 GND V2P5) ND4HV
+    I7 (DEN BIT\<2\> BIT\<1\> NBIT\<0\> NXX110 GND V2P5) ND4HV
+    I3 (DEN BIT\<2\> NBIT\<1\> BIT\<0\> NXX101 GND V2P5) ND4HV
+    I1 (DEN BIT\<2\> NBIT\<1\> NBIT\<0\> NXX100 GND V2P5) ND4HV
+    I62\<4\> (IN\<4\> NBIT\<4\> GND V2P5) IVHVX4
+    I62\<3\> (IN\<3\> NBIT\<3\> GND V2P5) IVHVX4
+    I62\<2\> (IN\<2\> NBIT\<2\> GND V2P5) IVHVX4
+    I62\<1\> (IN\<1\> NBIT\<1\> GND V2P5) IVHVX4
+    I62\<0\> (IN\<0\> NBIT\<0\> GND V2P5) IVHVX4
+    I5 (net72 DEN GND V2P5) IVHVX4
+    I9\<4\> (NBIT\<4\> BIT\<4\> GND V2P5) IVHVX4
+    I9\<3\> (NBIT\<3\> BIT\<3\> GND V2P5) IVHVX4
+    I9\<2\> (NBIT\<2\> BIT\<2\> GND V2P5) IVHVX4
+    I9\<1\> (NBIT\<1\> BIT\<1\> GND V2P5) IVHVX4
+    I9\<0\> (NBIT\<0\> BIT\<0\> GND V2P5) IVHVX4
+    I61 (N10XXX NXX000 OUT\<16\> GND V2P5) NR2HV
+    I60 (N10XXX NXX001 OUT\<17\> GND V2P5) NR2HV
+    I59 (N10XXX NXX010 OUT\<18\> GND V2P5) NR2HV
+    I58 (N10XXX NXX011 OUT\<19\> GND V2P5) NR2HV
+    I57 (N10XXX NXX100 OUT\<20\> GND V2P5) NR2HV
+    I56 (N11XXX NXX001 OUT\<25\> GND V2P5) NR2HV
+    I46 (N11XXX NXX110 OUT\<30\> GND V2P5) NR2HV
+    I38 (N01XXX NXX110 OUT\<14\> GND V2P5) NR2HV
+    I39 (N01XXX NXX111 OUT\<15\> GND V2P5) NR2HV
+    I47 (N11XXX NXX111 OUT\<31\> GND V2P5) NR2HV
+    I48 (N11XXX NXX011 OUT\<27\> GND V2P5) NR2HV
+    I22 (N01XXX NXX011 OUT\<11\> GND V2P5) NR2HV
+    I23 (N01XXX NXX100 OUT\<12\> GND V2P5) NR2HV
+    I24 (N01XXX NXX101 OUT\<13\> GND V2P5) NR2HV
+    I49 (N11XXX NXX100 OUT\<28\> GND V2P5) NR2HV
+    I50 (N11XXX NXX101 OUT\<29\> GND V2P5) NR2HV
+    I51 (N11XXX NXX010 OUT\<26\> GND V2P5) NR2HV
+    I52 (N10XXX NXX101 OUT\<21\> GND V2P5) NR2HV
+    I21 (N01XXX NXX010 OUT\<10\> GND V2P5) NR2HV
+    I14 (N00XXX NXX101 OUT\<5\> GND V2P5) NR2HV
+    I16 (N00XXX NXX110 OUT\<6\> GND V2P5) NR2HV
+    I18 (N00XXX NXX111 OUT\<7\> GND V2P5) NR2HV
+    I19 (N01XXX NXX000 OUT\<8\> GND V2P5) NR2HV
+    I20 (N01XXX NXX001 OUT\<9\> GND V2P5) NR2HV
+    I11 (N00XXX NXX100 OUT\<4\> GND V2P5) NR2HV
+    I8 (N00XXX NXX011 OUT\<3\> GND V2P5) NR2HV
+    I6 (N00XXX NXX010 OUT\<2\> GND V2P5) NR2HV
+    I2 (N00XXX NXX001 OUT\<1\> GND V2P5) NR2HV
+    I53 (N10XXX NXX110 OUT\<22\> GND V2P5) NR2HV
+    I54 (N10XXX NXX111 OUT\<23\> GND V2P5) NR2HV
+    I0 (N00XXX NXX000 OUT\<0\> GND V2P5) NR2HV
+    I55 (N11XXX NXX000 OUT\<24\> GND V2P5) NR2HV
+    I17 (DEN BIT\<4\> BIT\<3\> N11XXX GND V2P5) ND3HV
+    I12 (DEN NBIT\<4\> NBIT\<3\> N00XXX GND V2P5) ND3HV
+    I13 (DEN NBIT\<4\> BIT\<3\> N01XXX GND V2P5) ND3HV
+    I15 (DEN BIT\<4\> NBIT\<3\> N10XXX GND V2P5) ND3HV
+    I4 (EN net72 GND V2P5) IVHV
+ends decode_5to32_cr_q01
+// End of subcircuit definition.
+
+// Library name: STlib
+// Cell name: V25_passgatebi
+// View name: auGate_sch
+subckt V25_passgatebi A GN GP Y inh_gnd inh_vdd
+parameters wn=0 ln=0 mfactor=1 wp=0 lp=0
+    M10 (A GN Y inh_gnd) EN2V5GP_BS3JU w=wn l=ln nfing=1 ncrsd=1 \
+        mult=mfactor srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+    M9 (A GP Y inh_vdd) EP2V5GP_BS3JU w=wp l=lp nfing=1 ncrsd=1 \
+        mult=mfactor srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+ends V25_passgatebi
+// End of subcircuit definition.
+
+// Library name: qVLD1A_CR
+// Cell name: qVLD_amux_cr_q01
+// View name: schematic
+subckt qVLD_amux_cr_q01 AMUX EN GND In_40uAts MUXIN\<31\> MUXIN\<30\> \
+        MUXIN\<29\> MUXIN\<28\> MUXIN\<27\> MUXIN\<26\> MUXIN\<25\> \
+        MUXIN\<24\> MUXIN\<23\> MUXIN\<22\> MUXIN\<21\> MUXIN\<20\> \
+        MUXIN\<19\> MUXIN\<18\> MUXIN\<17\> MUXIN\<16\> MUXIN\<15\> \
+        MUXIN\<14\> MUXIN\<13\> MUXIN\<12\> MUXIN\<11\> MUXIN\<10\> \
+        MUXIN\<9\> MUXIN\<8\> MUXIN\<7\> MUXIN\<6\> MUXIN\<5\> MUXIN\<4\> \
+        MUXIN\<3\> MUXIN\<2\> MUXIN\<1\> MUXIN\<0\> SEL\<4\> SEL\<3\> \
+        SEL\<2\> SEL\<1\> SEL\<0\> V2P5 VBB
+    I21 (EN net110 net041 GND V2P5) ND2HV
+    I15 (EN SEL\<4\> SEL\<4\> net110 GND V2P5) ND3HV
+R15\<15\> (net102\<0\> MUXIN\<31\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+R15\<14\> (net102\<1\> MUXIN\<30\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+R15\<13\> (net102\<2\> MUXIN\<29\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+R15\<12\> (net102\<3\> MUXIN\<28\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+R15\<11\> (net102\<4\> MUXIN\<27\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+R15\<10\> (net102\<5\> MUXIN\<26\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+R15\<9\> (net102\<6\> MUXIN\<25\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+R15\<8\> (net102\<7\> MUXIN\<24\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+R15\<7\> (net102\<8\> MUXIN\<23\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+R15\<6\> (net102\<9\> MUXIN\<22\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+R15\<5\> (net102\<10\> MUXIN\<21\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+R15\<4\> (net102\<11\> MUXIN\<20\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+R15\<3\> (net102\<12\> MUXIN\<19\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+R15\<2\> (net102\<13\> MUXIN\<18\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+R15\<1\> (net102\<14\> MUXIN\<17\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+R15\<0\> (net102\<15\> MUXIN\<16\> GND) rpo1hM1 r=25K w=1u nc=1 mismatch=1 \
+        mult=1 lpe=0 dr_mdev=0
+C3\<15\> (net102\<0\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+C3\<14\> (net102\<1\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+C3\<13\> (net102\<2\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+C3\<12\> (net102\<3\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+C3\<11\> (net102\<4\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+C3\<10\> (net102\<5\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+C3\<9\> (net102\<6\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+C3\<8\> (net102\<7\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+C3\<7\> (net102\<8\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+C3\<6\> (net102\<9\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+C3\<5\> (net102\<10\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+C3\<4\> (net102\<11\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+C3\<3\> (net102\<12\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+C3\<2\> (net102\<13\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+C3\<1\> (net102\<14\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+C3\<0\> (net102\<15\> GND GND) CDONWPO2V5M1 c=250f w=7e-6 nc1=4 nc2=40 \
+        mult=1 lpe=0 mismatch=1
+    M0 (net121 net121 VBB VBB) EP2V5GP_BS3JU w=5u l=2u nfing=1 ncrsd=1 \
+        mult=2 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 dvt_mdev=0 \
+        dmu_mdev=0
+    M1 (net147 net121 VBB VBB) EP2V5GP_BS3JU w=5u l=2u nfing=1 ncrsd=1 \
+        mult=2 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 dvt_mdev=0 \
+        dmu_mdev=0
+    M2 (net121 net149 VBB VBB) EP2V5GP_BS3JU w=5u l=280n nfing=1 ncrsd=1 \
+        mult=1 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 dvt_mdev=0 \
+        dmu_mdev=0
+    M5 (net134 net149 In_40uAts GND) EN2V5GP_BS3JU w=2.8u l=0.28u nfing=2 \
+        ncrsd=1 mult=2 srcefirst=1 ngcon=1 mismatch=1 po2act=-1 lpe=0 \
+        dvt_mdev=0 dmu_mdev=0
+Q1 (net147 net147 net134 GND) npnvmvM1 l=0.800e-6 nbc=1 nbb=1 nbe=1 mult=1 \
+        mismatch=1 sh=0 lpe=0 dic_mdev=0 dib_mdev=0
+Q0 (net121 net146 net134 GND) npnvmvM1 l=0.800e-6 nbc=1 nbb=1 nbe=1 mult=1 \
+        mismatch=1 sh=0 lpe=0 dic_mdev=0 dib_mdev=0
+    I0 (EN GND SEL\<4\> SEL\<3\> SEL\<2\> SEL\<1\> SEL\<0\> out\<31\> \
+        out\<30\> out\<29\> out\<28\> out\<27\> out\<26\> out\<25\> \
+        out\<24\> out\<23\> out\<22\> out\<21\> out\<20\> out\<19\> \
+        out\<18\> out\<17\> out\<16\> out\<15\> out\<14\> out\<13\> \
+        out\<12\> out\<11\> out\<10\> out\<9\> out\<8\> out\<7\> out\<6\> \
+        out\<5\> out\<4\> out\<3\> out\<2\> out\<1\> out\<0\> V2P5) \
+        decode_5to32_cr_q01
+    I20 (net041 net082 GND V2P5) IVHV
+    I14 (net110 net149 GND V2P5) IVHV
+    I12\<31\> (out\<31\> n0\<31\> GND V2P5) IVHV
+    I12\<30\> (out\<30\> n0\<30\> GND V2P5) IVHV
+    I12\<29\> (out\<29\> n0\<29\> GND V2P5) IVHV
+    I12\<28\> (out\<28\> n0\<28\> GND V2P5) IVHV
+    I12\<27\> (out\<27\> n0\<27\> GND V2P5) IVHV
+    I12\<26\> (out\<26\> n0\<26\> GND V2P5) IVHV
+    I12\<25\> (out\<25\> n0\<25\> GND V2P5) IVHV
+    I12\<24\> (out\<24\> n0\<24\> GND V2P5) IVHV
+    I12\<23\> (out\<23\> n0\<23\> GND V2P5) IVHV
+    I12\<22\> (out\<22\> n0\<22\> GND V2P5) IVHV
+    I12\<21\> (out\<21\> n0\<21\> GND V2P5) IVHV
+    I12\<20\> (out\<20\> n0\<20\> GND V2P5) IVHV
+    I12\<19\> (out\<19\> n0\<19\> GND V2P5) IVHV
+    I12\<18\> (out\<18\> n0\<18\> GND V2P5) IVHV
+    I12\<17\> (out\<17\> n0\<17\> GND V2P5) IVHV
+    I12\<16\> (out\<16\> n0\<16\> GND V2P5) IVHV
+    I12\<15\> (out\<15\> n0\<15\> GND V2P5) IVHV
+    I12\<14\> (out\<14\> n0\<14\> GND V2P5) IVHV
+    I12\<13\> (out\<13\> n0\<13\> GND V2P5) IVHV
+    I12\<12\> (out\<12\> n0\<12\> GND V2P5) IVHV
+    I12\<11\> (out\<11\> n0\<11\> GND V2P5) IVHV
+    I12\<10\> (out\<10\> n0\<10\> GND V2P5) IVHV
+    I12\<9\> (out\<9\> n0\<9\> GND V2P5) IVHV
+    I12\<8\> (out\<8\> n0\<8\> GND V2P5) IVHV
+    I12\<7\> (out\<7\> n0\<7\> GND V2P5) IVHV
+    I12\<6\> (out\<6\> n0\<6\> GND V2P5) IVHV
+    I12\<5\> (out\<5\> n0\<5\> GND V2P5) IVHV
+    I12\<4\> (out\<4\> n0\<4\> GND V2P5) IVHV
+    I12\<3\> (out\<3\> n0\<3\> GND V2P5) IVHV
+    I12\<2\> (out\<2\> n0\<2\> GND V2P5) IVHV
+    I12\<1\> (out\<1\> n0\<1\> GND V2P5) IVHV
+    I12\<0\> (out\<0\> n0\<0\> GND V2P5) IVHV
+    I4\<31\> (n0\<31\> p0\<31\> GND V2P5) IVHV
+    I4\<30\> (n0\<30\> p0\<30\> GND V2P5) IVHV
+    I4\<29\> (n0\<29\> p0\<29\> GND V2P5) IVHV
+    I4\<28\> (n0\<28\> p0\<28\> GND V2P5) IVHV
+    I4\<27\> (n0\<27\> p0\<27\> GND V2P5) IVHV
+    I4\<26\> (n0\<26\> p0\<26\> GND V2P5) IVHV
+    I4\<25\> (n0\<25\> p0\<25\> GND V2P5) IVHV
+    I4\<24\> (n0\<24\> p0\<24\> GND V2P5) IVHV
+    I4\<23\> (n0\<23\> p0\<23\> GND V2P5) IVHV
+    I4\<22\> (n0\<22\> p0\<22\> GND V2P5) IVHV
+    I4\<21\> (n0\<21\> p0\<21\> GND V2P5) IVHV
+    I4\<20\> (n0\<20\> p0\<20\> GND V2P5) IVHV
+    I4\<19\> (n0\<19\> p0\<19\> GND V2P5) IVHV
+    I4\<18\> (n0\<18\> p0\<18\> GND V2P5) IVHV
+    I4\<17\> (n0\<17\> p0\<17\> GND V2P5) IVHV
+    I4\<16\> (n0\<16\> p0\<16\> GND V2P5) IVHV
+    I4\<15\> (n0\<15\> p0\<15\> GND V2P5) IVHV
+    I4\<14\> (n0\<14\> p0\<14\> GND V2P5) IVHV
+    I4\<13\> (n0\<13\> p0\<13\> GND V2P5) IVHV
+    I4\<12\> (n0\<12\> p0\<12\> GND V2P5) IVHV
+    I4\<11\> (n0\<11\> p0\<11\> GND V2P5) IVHV
+    I4\<10\> (n0\<10\> p0\<10\> GND V2P5) IVHV
+    I4\<9\> (n0\<9\> p0\<9\> GND V2P5) IVHV
+    I4\<8\> (n0\<8\> p0\<8\> GND V2P5) IVHV
+    I4\<7\> (n0\<7\> p0\<7\> GND V2P5) IVHV
+    I4\<6\> (n0\<6\> p0\<6\> GND V2P5) IVHV
+    I4\<5\> (n0\<5\> p0\<5\> GND V2P5) IVHV
+    I4\<4\> (n0\<4\> p0\<4\> GND V2P5) IVHV
+    I4\<3\> (n0\<3\> p0\<3\> GND V2P5) IVHV
+    I4\<2\> (n0\<2\> p0\<2\> GND V2P5) IVHV
+    I4\<1\> (n0\<1\> p0\<1\> GND V2P5) IVHV
+    I4\<0\> (n0\<0\> p0\<0\> GND V2P5) IVHV
+    I22 (net147 net149 net110 AMUX GND V2P5) V25_passgatebi wn=3e-07 \
+        ln=2.8e-07 mfactor=2 wp=3e-07 lp=2.8e-07
+    I19 (net146 net110 net149 net147 GND V2P5) V25_passgatebi wn=3e-07 \
+        ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I31 (net089 net082 net041 AMUX GND V2P5) V25_passgatebi wn=3e-07 \
+        ln=2.8e-07 mfactor=2 wp=3e-07 lp=2.8e-07
+    I18\<15\> (MUXIN\<15\> p0\<15\> n0\<15\> net089 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I18\<14\> (MUXIN\<14\> p0\<14\> n0\<14\> net089 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I18\<13\> (MUXIN\<13\> p0\<13\> n0\<13\> net089 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I18\<12\> (MUXIN\<12\> p0\<12\> n0\<12\> net089 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I18\<11\> (MUXIN\<11\> p0\<11\> n0\<11\> net089 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I18\<10\> (MUXIN\<10\> p0\<10\> n0\<10\> net089 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I18\<9\> (MUXIN\<9\> p0\<9\> n0\<9\> net089 GND V2P5) V25_passgatebi \
+        wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I18\<8\> (MUXIN\<8\> p0\<8\> n0\<8\> net089 GND V2P5) V25_passgatebi \
+        wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I18\<7\> (MUXIN\<7\> p0\<7\> n0\<7\> net089 GND V2P5) V25_passgatebi \
+        wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I18\<6\> (MUXIN\<6\> p0\<6\> n0\<6\> net089 GND V2P5) V25_passgatebi \
+        wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I18\<5\> (MUXIN\<5\> p0\<5\> n0\<5\> net089 GND V2P5) V25_passgatebi \
+        wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I18\<4\> (MUXIN\<4\> p0\<4\> n0\<4\> net089 GND V2P5) V25_passgatebi \
+        wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I18\<3\> (MUXIN\<3\> p0\<3\> n0\<3\> net089 GND V2P5) V25_passgatebi \
+        wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I18\<2\> (MUXIN\<2\> p0\<2\> n0\<2\> net089 GND V2P5) V25_passgatebi \
+        wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I18\<1\> (MUXIN\<1\> p0\<1\> n0\<1\> net089 GND V2P5) V25_passgatebi \
+        wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I18\<0\> (MUXIN\<0\> p0\<0\> n0\<0\> net089 GND V2P5) V25_passgatebi \
+        wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<15\> (net102\<0\> p0\<31\> n0\<31\> net146 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<14\> (net102\<1\> p0\<30\> n0\<30\> net146 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<13\> (net102\<2\> p0\<29\> n0\<29\> net146 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<12\> (net102\<3\> p0\<28\> n0\<28\> net146 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<11\> (net102\<4\> p0\<27\> n0\<27\> net146 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<10\> (net102\<5\> p0\<26\> n0\<26\> net146 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<9\> (net102\<6\> p0\<25\> n0\<25\> net146 GND V2P5) V25_passgatebi \
+        wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<8\> (net102\<7\> p0\<24\> n0\<24\> net146 GND V2P5) V25_passgatebi \
+        wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<7\> (net102\<8\> p0\<23\> n0\<23\> net146 GND V2P5) V25_passgatebi \
+        wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<6\> (net102\<9\> p0\<22\> n0\<22\> net146 GND V2P5) V25_passgatebi \
+        wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<5\> (net102\<10\> p0\<21\> n0\<21\> net146 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<4\> (net102\<11\> p0\<20\> n0\<20\> net146 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<3\> (net102\<12\> p0\<19\> n0\<19\> net146 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<2\> (net102\<13\> p0\<18\> n0\<18\> net146 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<1\> (net102\<14\> p0\<17\> n0\<17\> net146 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+    I1\<0\> (net102\<15\> p0\<16\> n0\<16\> net146 GND V2P5) \
+        V25_passgatebi wn=3e-07 ln=2.8e-07 mfactor=1 wp=3e-07 lp=2.8e-07
+ends qVLD_amux_cr_q01
+// End of subcircuit definition.
+
+// Library name: qVLD1A_TopSim_LL
+// Cell name: test_for_rails_app
+// View name: schematic
+I16 (net4 net3 net1 net6 net5\<0\> net5\<1\> net5\<2\> net5\<3\> net5\<4\> \
+        net5\<5\> net5\<6\> net5\<7\> net5\<8\> net5\<9\> net5\<10\> \
+        net5\<11\> net5\<12\> net5\<13\> net5\<14\> net5\<15\> net5\<16\> \
+        net5\<17\> net5\<18\> net5\<19\> net5\<20\> net5\<21\> net5\<22\> \
+        net5\<23\> net5\<24\> net5\<25\> net5\<26\> net5\<27\> net5\<28\> \
+        net5\<29\> net5\<30\> net5\<31\> net7\<0\> net7\<1\> net7\<2\> \
+        net7\<3\> net7\<4\> net2 net8) qVLD_amux_cr_q01
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 ckptclock=1800 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts  where=rawfile
+saveOptions options save=allpub subcktprobelvl=2
